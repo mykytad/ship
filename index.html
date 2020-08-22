@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>ship</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body{
+		  width: 1200px;
+		  margin: 0 auto;
+		  background: blue;
+		}
+		div{
+			margin: 150px auto;
+		}
+		.bolt{
+		  position: relative;
+		  background: radial-gradient(circle, transparent 50px, gray 50px);
+		  width:200px;
+		  height: 100px;
+		}
+		.bolt:before{
+		  content:"";
+		  position: absolute;
+		  bottom: 100%;
+		  left:calac(50%-50);
+		  width: 0;
+		  border-bottom: 70px solid gray;
+		  border-right:100px solid transparent;
+		  border-left: 100px solid transparent;
+		}
+		.bolt:after{
+		  content:"";
+		  position: absolute;
+		  top: 100%;
+		  left:calac(50%-50);
+		  width: 0;
+		  border-top: 70px solid gray;
+		  border-right:100px solid transparent;
+		  border-left: 100px solid transparent;
+		}
+		.nut{
+		  position:relative;
+		  background: gray;
+		  width: 150px;
+		  height: 50px;
+		}
+		.nut:before{
+		  content:"";
+		  position: absolute;
+		  background: gray;
+		  right: 90%;
+		  bottom:55%;
+		  width: 50px;
+		  height: 50px;
+		  border-radius:50% 50% 0 50%/50% 0 0 0 ;
+		}
+		.nut:after{
+		  content:"";
+		  position: absolute;
+		  background: gray;
+		  right: 90%;
+		  top:55%;
+		  width: 50px;
+		  height: 50px;
+		  border-radius:50% 50% 0 50%/0 0 0 50% ;
+		}
+		.liner{
+			position: absolute;
+			z-index: 10;
+			bottom:-16px;
+			left:70px;
+			background: repeating-linear-gradient(-45deg, #232222, #5d5b5b 10px, #232222 10px, #5d5b5b 10px);
+			width:80px;
+			height:50px;
+		}
+		.key{
+			position: relative;
+			width:300px;
+			height: 100px;
+			background: gray;
+			border-radius:0 50% 50% 0;
+			background: radial-gradient(circle,at right, transparent 10px, gray 10px); 
+		}
+		.key:before{
+			content:"";
+			position:absolute;
+			top:calc(50% - 80px);
+			right:93%;
+			background: transparent;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			border-top:30px solid gray;
+			border-right:30px solid gray;
+			border-bottom:30px solid gray;
+			border-left:20px solid transparent;
+		}
+		.ship{
+			position: relative;
+			margin-top: 400px;
+			width: 700px;
+			height: 100px;
+			background: brown;
+		}
+		.ship:before{
+			content: "";
+			position: absolute;
+			right:100%;
+			top:calc(50% - 50px);
+			width: 0;
+			border-top:1px solid transparent;
+			border-right:110px solid brown;
+			border-bottom:99px solid transparent;
+		}
+		.ship:after{
+			content: "";
+			position: absolute;
+			left: 91%;
+   			top: calc(50% - 100px);
+			background:brown;
+			width: 150px;
+			height: 106px;
+			transform: rotate(-45deg)
+		}
+		.window{
+			position: relative;
+			display: inline-block;
+			background: aqua;
+			width: 45px;
+			height: 45px;
+			border: 5px solid black;
+			border-radius:50%;
+		}
+		/*window*/
+			.window1{
+				left:100px;
+			}
+			.window2{
+				left:200px;
+			}
+			.window3{
+				left:300px;
+			}
+			.window4{
+				left:400px;
+			}
+		.window:after{
+			content: "";
+			position: absolute;
+			left:250%;
+			top:;
+			background: #691818;
+			width: 5px;
+			height: 250px;
+			transform: rotate(-45deg)
+		}
+		.window:before{
+			content:"";
+			position: absolute;
+			background: #691818;
+			width: 80px;
+			height: 80px;
+			border-radius: 50% 50% 0 0;
+			/*right:calc(50% - 20px);*/
+			top:190px;
+			transform: rotate(-45deg);
+			left: 400%;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="bolt">
+		<p class="circle"></p>
+	</div>
+	<div class="nut">
+		<p class="liner"></p>
+	</div>
+	<div class="key">
+		
+	</div>
+	<div class="ship">
+		<p class="window1 window"></p>
+		<p class="window2 window"></p>
+		<p class="window3 window"></p>
+		<p class="window4 window"></p>
+	</div>
+
+
+	<div class="container">
+      <div class="hellboy"></div>
+	</div>
+</body>
+</html>
