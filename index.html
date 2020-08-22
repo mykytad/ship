@@ -10,11 +10,10 @@
 		  margin: 0 auto;
 		  background: blue;
 		}
-		div{
-			margin: 150px auto;
-		}
+		
 		.bolt{
 		  position: relative;
+		  margin: 200px auto;
 		  background: radial-gradient(circle, transparent 50px, gray 50px);
 		  width:200px;
 		  height: 100px;
@@ -41,6 +40,7 @@
 		}
 		.nut{
 		  position:relative;
+		  margin: 50px auto;
 		  background: gray;
 		  width: 150px;
 		  height: 50px;
@@ -76,11 +76,12 @@
 		}
 		.key{
 			position: relative;
+			margin: 150px auto;
 			width:300px;
 			height: 100px;
 			background: gray;
 			border-radius:0 50% 50% 0;
-			background: radial-gradient(circle,at right, transparent 10px, gray 10px); 
+			background: radial-gradient(at 90% 50%, transparent 20px, gray 20px); 
 		}
 		.key:before{
 			content:"";
@@ -98,7 +99,8 @@
 		}
 		.ship{
 			position: relative;
-			margin-top: 400px;
+			margin: 600px 100px 300px 150px;
+
 			width: 700px;
 			height: 100px;
 			background: brown;
@@ -145,28 +147,67 @@
 			.window4{
 				left:400px;
 			}
-		.window:after{
+			.window:after{
+				content: "";
+				position: absolute;
+				left:250%;
+				top:;
+				background: #691818;
+				width: 5px;
+				height: 250px;
+				transform: rotate(-45deg)
+			}
+			.window:before{
+				content:"";
+				position: absolute;
+				background: #691818;
+				width: 80px;
+				height: 80px;
+				border-radius: 50% 50% 0 0;
+				/*right:calc(50% - 20px);*/
+				top:190px;
+				transform: rotate(-45deg);
+				left: 400%;
+			}
+		.ship>div{
+			position: absolute;
+			height: 350px;
+			width: 10px;
+			background: brown;
+			bottom:100%;
+			right:50%;
+		}
+		.ship>div:before{
 			content: "";
 			position: absolute;
-			left:250%;
-			top:;
-			background: #691818;
-			width: 5px;
-			height: 250px;
-			transform: rotate(-45deg)
+			bottom:1px;
+			left:9px;
+			width: 0;
+			border-top:140px solid transparent;
+			border-right:140px solid transparent;
+			border-bottom:140px solid transparent;
+			border-left:140px solid white;
 		}
-		.window:before{
-			content:"";
+		.ship>div:after{
+			content: "";
+		    position: absolute;
+		    left: -360px;
+		    width: 300px;
+		    height: 300px;
+		    border-radius: 50%;
+		    border-top: 10px solid white;
+		    border-right: 30px solid transparent;
+		    border-bottom: 10px solid white;
+		    border-left: 150px solid white;
+		}
+		.ship>div>p{
 			position: absolute;
-			background: #691818;
-			width: 80px;
-			height: 80px;
-			border-radius: 50% 50% 0 0;
-			/*right:calc(50% - 20px);*/
-			top:190px;
-			transform: rotate(-45deg);
-			left: 400%;
-
+			bottom:85%;
+			left:100%;
+			width: 100px;
+			border-top:15px solid black;
+			border-right:15px solid transparent;
+			border-bottom:15px solid black;
 		}
 	</style>
 </head>
@@ -185,6 +226,9 @@
 		<p class="window2 window"></p>
 		<p class="window3 window"></p>
 		<p class="window4 window"></p>
+		<div>
+			<p></p>
+		</div>
 	</div>
 
 
